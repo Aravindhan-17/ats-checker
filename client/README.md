@@ -1,77 +1,117 @@
-# React + TypeScript + Vite
+# ATS Checker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application to analyze and optimize resumes for Applicant Tracking Systems (ATS). This tool helps job seekers improve their resume's compatibility with ATS systems used by most companies.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 📄 **Resume Analysis** - Upload and analyze your resume for ATS compatibility
+- 🔍 **Keyword Optimization** - Identify missing keywords and skills relevant to job descriptions
+- 📊 **Score & Metrics** - Get detailed scoring metrics for your resume
+- 🎨 **Modern UI** - Clean and intuitive user interface with real-time feedback
+- 💾 **Easy Export** - Generate optimized resume suggestions
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **Frontend**: React 18+ with TypeScript
+- **Build Tool**: Vite
+- **Styling**: CSS
+- **Language**: TypeScript (43.5%), CSS (47.5%), JavaScript (5.6%)
 
-Note: This will impact Vite dev & build performances.
+## Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node.js (v16 or higher)
+- npm or yarn package manager
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+1. Clone the repository:
+```bash
+git clone https://github.com/Aravindhan-17/ats-checker.git
+cd ats-checker
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Navigate to the client directory:
+```bash
+cd client
+```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3. Install dependencies:
+```bash
+npm install
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Development
+
+To run the development server with Hot Module Replacement (HMR):
+
+```bash
+npm run dev
+```
+
+The application will start at `http://localhost:5173`
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+The optimized build will be generated in the `dist` folder.
+
+### Running ESLint
+
+To check code quality:
+
+```bash
+npm run lint
+```
+
+## Project Structure
 
 ```
+ats-checker/
+├── client/               # React frontend application
+├── src/
+│   ├── components/      # React components
+│   ├── pages/          # Page components
+│   └── styles/         # CSS stylesheets
+├── public/             # Static assets
+├── vite.config.ts      # Vite configuration
+├── tsconfig.json       # TypeScript configuration
+└── package.json        # Project dependencies
+```
+
+## Development Guidelines
+
+### ESLint Configuration
+
+This project includes ESLint for code quality. For production applications, consider enabling type-aware lint rules in your ESLint configuration by modifying `eslint.config.js`.
+
+### React Compiler
+
+The React Compiler is enabled to optimize component rendering. Note that this may impact Vite dev and build performance.
+
+## Contributing
+
+1. Create a feature branch (`git checkout -b feature/amazing-feature`)
+2. Commit your changes (`git commit -m 'Add amazing feature'`)
+3. Push to the branch (`git push origin feature/amazing-feature`)
+4. Open a Pull Request
+
+## License
+
+This project is currently unlicensed. See the repository for more details.
+
+## Author
+
+[Aravindhan-17](https://github.com/Aravindhan-17)
+
+## Support
+
+For issues, questions, or feature requests, please open an issue on the [GitHub repository](https://github.com/Aravindhan-17/ats-checker/issues).
+
+---
+
+**Last Updated**: June 29, 2026
